@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <style>
+
+        .AplicarGrid{
+
+            display: grid;
+            gap: 1.5rem;
+            grid-template-areas: 
+
+            "Navega"
+            "heroe"
+            "princi";
+
+        }
+
+        .Navega {grid-area: Navega;}
+        .heroe  {grid-area: heroe;}
+        .princi {grid-area: princi;}
+
+        .Navega{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: aquamarine;
+            padding: 15px;
+        }
+
+        .Navega a{
+            color: black;
+            text-decoration: none;
+        }
+
+        .heroe{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            background-color: chartreuse;
+            text-align: center;
+        }
+
+        .princi{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px;
+            justify-content: center;
+        }
+
+        .carta{
+
+            flex: 1 1 280px;
+            max-width: 400px;
+            background-color: brown;
+            border: 1px solid olive;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px black;
+        }
+
+        h1 {
+            color: #9e0cd8;
+            text-align: center;
+            font-family: 	Comic Sans MS;
+            font-size: 30px;
+        }
+
+        </style>
+    </head>
+<body>
+
+    <div class="AplicarGrid">
+        
+        <nav class="Navega">
+            <a href="#inicio">Inicio</a>
+            <a href="#caracteristicas">Caracteristicas</a>
+            <a href="#contactos"> Contactos</a>
+        </nav>
+
+    
+        <header class="heroe">
+
+            <div class="Contenido">
+
+                <h1> el diseño grafico es mi pasion </h1>
+
+                <form action="/enviar" method="post">
+
+                    <label for="nombre"> nombre </label>
+                    <input type="text"
+                    id="nombre" required>
+
+                    <label for="correo"> Correo </label>
+                    <input type="email"
+                    id="correo" required>
+
+                    <label for="mensaje"> Mensaje </label>
+                    <textarea name="mensaje" id="mensaje"></textarea>
+                
+                    <button type="submit"> enviar </button>
+                </form>
+            </div>
+
+        </header>
+
+        <main class="princi">
+            <div class="carta">
+
+                <h3> titulo 1 </h3>
+                <p>aca habra contenido</p>
+
+            </div>
+            <div class="carta">
+
+                <h3> titulo 2</h3>
+                <p> informacion importante aca </p>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>
