@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <style>
 
-        .AplicarGrid{
-
+        .AplicarGrid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
             grid-template-areas: 
-
-            "Navega"
-            "heroe"
-            "princi";
-
+                "Navega"
+                "heroe"
+                "princi";
+            grid-template-columns: 1fr ; /* 1 sola columna en móvil */
         }
 
-        .Navega {grid-area: Navega;}
-        .heroe  {grid-area: heroe;}
-        .princi {grid-area: princi;}
-
+       
         .Navega{
+            grid-area: Navega;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -34,6 +30,7 @@
         }
 
         .heroe{
+            grid-area: heroe;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -43,21 +40,22 @@
         }
 
         .princi{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 30px;
+            grid-area: princi;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 40px;
+            justify-items: center;
             justify-content: center;
         }
 
         .carta{
-
-            flex: 1 1 280px;
+            width: 80%;   
             max-width: 400px;
             background-color: brown;
             border: 1px solid olive;
             border-radius: 10px;
-            padding: 20px;
+            padding: 30px;
             box-shadow: 0 4px 6px black;
         }
 
@@ -67,6 +65,17 @@
             font-family: 	Comic Sans MS;
             font-size: 30px;
         }
+
+         @media (min-width: 780px){
+
+            .princi{grid-template-columns: repeat(2, minmax(300px, 400px));}
+        }
+
+        @media (min-width: 1028px){
+
+            .princi {grid-template-columns:auto ;}
+        }
+
 
         </style>
     </head>
@@ -85,7 +94,7 @@
 
             <div class="Contenido">
 
-                <h1> el diseño grafico es mi pasion </h1>
+                <h1> el diseno grafico es mi pasion </h1>
 
                 <form action="/enviar" method="post">
 

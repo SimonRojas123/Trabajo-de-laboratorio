@@ -1,3 +1,3 @@
-#Lab 2 primer commit
+#Lab 2 tercer commit
 
-aplicación inicial del grid a la interfaz
+aplicación de funcion grid con movile first @media
