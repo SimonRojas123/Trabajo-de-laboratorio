@@ -1,3 +1,4 @@
-#Lab 2 tercer commit
+#Lab 2 ultimo commit
 
-aplicación de funcion grid con movile first @media
+Implementacion del framework Bulma (referenciado con el CDN)
+
